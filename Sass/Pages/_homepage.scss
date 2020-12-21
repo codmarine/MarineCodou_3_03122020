@@ -6,24 +6,120 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @include background-color;
 }
 
 /*-------------------------------------------------------------
 # Section 2: Fonctionnement
 --------------------------------------------------------------*/
+.section2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.search {
+    height: 50px;
+    width: 100%;
+    @include search-background;
+}
+
+.section2 h2 {
+    width: 335px;
+    text-align: left;
+}
 .step {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
+    margin-bottom: 25px;
+    cursor: pointer;
     &__nb {
         color: $color-white;
         background-color: $color-primary;
         border-radius: 50%;
         height: 24px;
         width: 24px;
+        font-size: 10px;
+        line-height: 24px;
         text-align:center;
+        margin-right: -12px;
+        z-index: 1;
+    }
+    &__card {
+        width: 323px;
+        height: 75px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        @include background-color;
+        @include soft-shadow;
+        border-radius: 20px;
+        &__icon {
+            @include step-icon-color;
+            margin-right: 25px;
+            margin-left: 33px;
+        }
+        &__text {
+            font-weight: 900;
+        }
+
+    }
+}
+
+/*-------------------------------------------------------------
+# Section 3: Restaurant
+--------------------------------------------------------------*/
+.section3 {
+    @include background-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section3 h2 {
+    width: 335px;
+    text-align: left;
+}
+
+.restaurant-prev {
+    height: 250px;
+    width: 335px;
+
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    &__img {
+        background-size: cover;
+        background-position: center;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        height: 174px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    &__card {
+        background-color: $color-white;
+        padding-left: 15px;
+        padding-right: 15px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        @include soft-shadow;
+    }
+    &__text {
+        line-height: 0.5em;
     }
 }

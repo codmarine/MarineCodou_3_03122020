@@ -1,0 +1,10 @@
+.new {
+    background-color: $color-tertiary;
+    @include new-text-color;
+    margin-top: 12px;
+    margin-right: 12px;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}

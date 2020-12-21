@@ -2,13 +2,24 @@
     background: linear-gradient($color1, $color2);
 }
 
+@mixin strong-shadow {
+    box-shadow: 0px 0px 4px 0px hsl(0,0%,84%);
+}
+
+@mixin soft-shadow {
+    box-shadow: 0px 0px 8px 0px hsl(0,0%,81%) ;
+}
+
 @mixin btn{
     height: 50px;
     @include gradient;
+    @include strong-shadow;
     color: $color-white;
     border: none;
     border-radius: 25px;
     cursor: pointer;
+    margin-top: 14px;
+    margin-bottom: 14px;
 }
 
 @mixin background-color($color: $color-white) {
@@ -23,4 +34,6 @@
     color: darken($color, 74%);
 }
 
-@mixin border-shadow
+@mixin search-background($color: $color-white) {
+    background-color: darken($color, 8%);
+}

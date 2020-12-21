@@ -4,6 +4,7 @@
 @import "./Base/typography";
 @import "./Composants/like";
 @import "./Composants/buttons";
+@import "./Composants/new";
 @import "./Layout/header";
 @import "./Layout/footer";
 @import "./Pages/homepage";
@@ -11,4 +12,15 @@
 
 ul li {
     list-style: none;
+}
+
+ul {
+    padding: 0;
+}
+
+section {
+    width: 100%;
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 20px;
 }
