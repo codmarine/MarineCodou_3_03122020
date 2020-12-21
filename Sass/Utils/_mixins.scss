@@ -1,0 +1,26 @@
+@mixin gradient($color1: $color-secondary, $color2: $color-primary) {
+    background: linear-gradient($color1, $color2);
+}
+
+@mixin btn{
+    height: 50px;
+    @include gradient;
+    color: $color-white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+@mixin background-color($color: $color-white) {
+    background-color: darken($color, 4%);
+}
+
+@mixin step-icon-color ($color: $color-white) {
+    color: darken($color, 51%);
+}
+
+@mixin new-text-color ($color: $color-tertiary) {
+    color: darken($color, 74%);
+}
+
+@mixin border-shadow
